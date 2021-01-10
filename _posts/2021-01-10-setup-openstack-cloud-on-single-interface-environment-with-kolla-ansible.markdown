@@ -9,13 +9,15 @@ tags:
   - kolla-ansible
 ---
 
-This is my experiment lab to deploy OpenStack Cloud on single interface environment using Kolla-Ansible. Should only use for lab/experiment purpose, not for production.
+This is my experiment lab to deploy OpenStack Cloud on single interface environment, using Kolla-Ansible. This lab should only use for lab/experiment purpose, not for production.
 
-In this lab, I used following components provides by virtualization software susch as: Virtual Machine Manager (Linux) Or VMWare Workstation (Windows):
+In this lab, I used following components provides by a virtualization software susch as: Virtual Machine Manager (Linux) or VMWare Workstation (Windows):
 
 ![openstack-2-node-planning-single-interface.png](/img/in-post/post-kolla-ansible-single-interface/openstack-2-node-planning-single-interface.png)
 
-## Components Planning
+## Planning before setup
+
+### System Components
 
 Controller node:
 
@@ -39,7 +41,7 @@ Bastion node:
 - 1 Disk drives, for Host OS (`/sda` - LVM)
 - Ubuntu Server 18.04
 
-## Install Version
+### Installed Versions
 
 - Kolla-ansible version: 9.x.x (compatible with OpenStack Train version). On writing time, version choosen is 9.3.0
 - OpenStack version: Train
@@ -394,7 +396,7 @@ pipelining=True
 forks=100
 ```
 
-## Prepare Configurtion Files and Deploy OpenStack Cloud
+## Deploy OpenStack Cloud
 
 ### Setup ansbile inventory file
 
@@ -434,7 +436,7 @@ Generate password file `/etc/kolla/passwords.yml
 kolla-genpwd
 ```
 
-### Setup kolla-ansible configuration file
+### Setup Kolla-Ansible configuration files
 
 Next step, we have to update config file `/etc/kolla/globals.yml` with following contents
 
@@ -458,7 +460,7 @@ enable_cinder_backend_lvm: "yes"
 enable_neutron_provider_networks: "yes"
 ```
 
-### Deploy OpenStack Cloud Using Kolla Ansible
+### Using Kolla-Ansible Deploy OpenStack Cloud
 
 On bastion node, perform following steps:
 
@@ -470,7 +472,7 @@ Precheck environment: `kolla-ansible -i ./multinode prechecks`
 
 Deploy OpenStack Train to controller and compute hosts: `kolla-ansible -i ./multinode deploy`
 
-### Verify installed environment
+### Verify Installed Environment
 
 From home directory, create folder `openstack-client`
 
