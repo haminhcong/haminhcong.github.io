@@ -6,7 +6,8 @@ author: "conghm"
 header-style: text
 tags:
   - openstack
-  - kolla-ansible
+  - kubernetes
+  - kubeadm
 ---
 
 Experimental to deploy kubernetes cluster on OpenStack Cloud Provider - VEXXHOST,
