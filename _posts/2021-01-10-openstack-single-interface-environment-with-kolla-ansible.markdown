@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "My Spacemacs Workflow"
-subtitle: 'From Vim to Spacemacs'
-author: "Hux"
+title: "Setup OpenStack Cloud On Single-Interface Environment With Kolla Ansible"
+subtitle: 'Kolla Ansible Single Interface'
+author: "conghm"
 header-style: text
 tags:
-  - Vim
-  - Emacs
+  - openstack
+  - kolla-ansible
 ---
 
 Emacs tend to provide a good support for functional programming languages. Indeed, many FP language community exclusively use Emacs and give only first-party IDE supports to Emacs, such as Coq, Agda, Standard ML, Clojure, etc.
