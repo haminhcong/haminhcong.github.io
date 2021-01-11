@@ -4,7 +4,7 @@ SEOTitle: CongHM Blog
 header-img: img/home-bg.jpg
 email: conghm96@gmail.com
 description: "CongHM Blog. Backend Programming & System Operation"
-url: "https://haminhcong.github.io"              # your host, for absolute URL
+url: "https://conghm.info"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
